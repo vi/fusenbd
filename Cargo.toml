@@ -1,0 +1,10 @@
+[package]
+name = "fusenbd"
+version = "0.1.0"
+authors = ["Vitaly _Vi Shukela <vi0oss@gmail.com>"]
+description = "FUSE-based network block device client that exposes NBD export as a plain file"
+
+[dependencies]
+fuse = "0.3.1"
+structopt = { version = "0.2", default-features = false }
+nbd = "0.2.1"
