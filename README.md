@@ -59,7 +59,7 @@ Building and installing
 For Linux x86_64, you can try a [pre-built version](https://github.com/vi/fusenbd/releases).
 Otherwise,
 
-1. Setup [rust toolchain](rustup.rs)
+1. Setup [rust toolchain](https://rustup.rs)
 2. Install FUSE development headers (`apt-get install libfuse-dev`)
 3. `cargo install fusenbd`.
 4. Either use `fusenbd` right away or find it somewhere and copy to `$PATH`.
