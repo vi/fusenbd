@@ -10,3 +10,4 @@ structopt = { version = "0.2", default-features = false }
 nbd = "0.2.1"
 time = "0.1"
 libc = "0.2"
+readwriteseekfs = "0.1.0"
