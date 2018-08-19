@@ -5,6 +5,7 @@ extern crate structopt;
 extern crate fuse;
 extern crate nbd;
 extern crate readwriteseekfs;
+extern crate bufstream;
 
 use fuse::Filesystem;
 use std::ffi::{OsStr, OsString};
@@ -61,6 +62,7 @@ fn run() -> Result<()> {
     }
 
     let mut tcp = TcpStream::connect(cmd.hostport)?;
+    let mut tcp = bufstream::BufStream::new(tcp);
     let export = handshake(&mut tcp, cmd.export.as_bytes())?;
     let mut client = NbdClient::new(&mut tcp, &export);
 
